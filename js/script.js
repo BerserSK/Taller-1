@@ -95,6 +95,14 @@ switch(eleccion){
         let multiplicar=parseInt(num1)*parseInt(num2);
         console.log(`El resultado de la multiplicacion es ${multiplicar}`);
     break;
+    case "potencia":
+        let potencia=Math.pow(parseInt(num1),parseInt(num2));
+        console.log(`El resultado de la potencia es ${potencia}`);
+    break;
+    case "raiz":
+        let raiz=Math.hypot(parseInt(num1),parseInt(num2)); //otro motodo con un solo numero puede ser Math.sqrt(x)
+        console.log(`El resultado de la raiz cuadrada es ${raiz}`);
+    break;
     default: 
         console.log(`La eleccion elegida es incorrecta`);
     break;
