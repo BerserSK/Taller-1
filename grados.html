@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="">
+        <a href="index-vistas.html"><button class="back"><i class="fa-solid fa-hand-point-left"></i>Volver al inicio</button></a>
+        <form class="form-ejercicios">
+            <div class="form">
+                <h1 style="font-size: 2em;">Convertidor Grados</h1>
+                <div class=" grupo">
+                    <span for="">De</span>
+                    <select class="grupo" id="selection" style="margin-left: 0;" required><span class="barra"></span>
+                        <option selected>Seleccione la escala de medición</option>
+                        <option value="1">De Farenheit </option>
+                        <option value="3">De Celcuis</option>
+                        <option value="6">De Kelvin</option>
+                    </select>
+                </div>
+                <div class=" grupo">
+                    <span for="">A</span>
+                    <select class="grupo" id="selection" style="margin-left: 0;" required><span class="barra"></span>
+                        <option selected>Seleccione la escala de medición</option>
+                        <option value="1">A Celcius</option>
+                        <option value="2">A kelvin</option>
+                        <option value="6">A Farenheit</option>
+                    </select>
+                </div>
+                <div class="grupo">
+                    <input type="number" class="" id="grados" required><span class="barra"></span>
+                    <label for="grados" class="">Ingrese el valor de los grados</label>
+                </div>
+                <button type="submit" class="submit" style="margin-left: 39px" onclick="Convertir()">Convertir</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/grados.js"></script>
+</body>
+</html>
