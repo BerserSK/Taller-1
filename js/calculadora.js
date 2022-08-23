@@ -5,18 +5,22 @@ function calcular(){
     if(op==1){
         let sum=num1+num2;
         alert(`Los numeros digitados son ${num1} y ${num2}.
+        La operacion elegia es Suma.
         El resultado de la operacion es ${sum}`);
     }else if(op==2){
       let res=num1-num2;
       alert(`Los numeros digitados son ${num1} y ${num2}.
+      La operacion elegia es Resta.
       El resultado de la oparacion es ${res}`)
     }else if(op==3){
       let mult=num1*num2;
       alert(`Los numeros digitados son ${num1} y ${num2}.
+      La operacion elegia es Multiplicacion.
       El resultado de la oparacion es ${mult}`)
     }else if(op==4){
       let div=num1/num2;
       alert(`Los numeros digitados son ${num1} y ${num2}.
+      La operacion elegia es Division.
       El resultado de la oparacion es ${div}`)
     }else{
       alert(`La opcion Elegida no es valida, Por favor vuelva

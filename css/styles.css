@@ -1,10 +1,10 @@
-:root{
+:root {
     --colorTexto: #49454567;
 }
 
 *,
 ::before,
-::after{
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,41 +24,42 @@ body {
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none !important;
 }
 
-button{
+button {
     text-decoration: none;
 }
 
-i{
+i {
     text-decoration: none;
 }
 
-h1{
+h1 {
     text-align: center;
     font-weight: 700;
 }
 
-form{
+form {
     background: #fff;
     padding: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
 
-.form{
+.form {
     width: 100%;
     margin: auto;
 }
 
-.form .grupo{
+.form .grupo {
     position: relative;
     margin: 45px;
 }
 
-input,select{
+input,
+select {
     background: none;
     color: #c6c6c6;
     font-size: 18px;
@@ -71,21 +72,23 @@ input,select{
     -webkit-outer-spin-button: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input[type=number] { -moz-appearance:textfield; }
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 input:focus,
-select:focus{
+select:focus {
     outline: none;
     color: #5e5d5d;
 }
 
-label{
+label {
     color: var(--colorTexto);
     font-size: 16px;
     position: absolute;
@@ -99,18 +102,19 @@ label{
 input:focus~label,
 input:valid~label,
 select:focus~label,
-select:valid~label{
+select:valid~label {
     top: -14px;
     font-size: 12px;
     color: #2196f3;
 }
-.barra{
+
+.barra {
     position: relative;
     display: block;
     width: 100%;
 }
 
-.barra::before{
+.barra::before {
     content: "";
     height: 2px;
     width: 0%;
@@ -122,11 +126,11 @@ select:valid~label{
 }
 
 input:focus~.barra::before,
-select:focus~.barra::before{
+select:focus~.barra::before {
     width: 100%;
 }
 
-.submit{
+.submit {
     font-family: 'Roboto';
     background: #FC466B;
     /* fallback for old browsers */
@@ -144,7 +148,7 @@ select:focus~.barra::before{
     cursor: pointer;
 }
 
-.back{
+.back {
     font-family: 'Roboto';
     background: #FC466B;
     /* fallback for old browsers */
@@ -162,7 +166,25 @@ select:focus~.barra::before{
     cursor: pointer;
 }
 
-.first{
+.back:hover{
+    background: #FC466B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3F5EFB, #FC466B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    bottom: 7px;
+    transition: .2s ease all;
+}
+
+.calculator{
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+}
+
+.first {
     font-family: 'Roboto';
     background: #FC466B;
     /* fallback for old browsers */
@@ -180,25 +202,51 @@ select:focus~.barra::before{
     cursor: pointer;
 }
 
-.fa-arrow-left{
+.first:hover {
+    background: #FC5C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+    right: 15px;
+    transition: .2s ease all;
+}
+
+.fa-hand-point-left {
     padding-right: 10px;
 }
 
 .fa-calculator,
 .fa-piggy-bank,
-.fa-coins{
+.fa-coins,
+.fa-recycle {
     padding: 22px;
 }
 
-.fa-square-js{
+.fa-square-js {
     margin-left: 50%;
     font-size: 6em;
     color: #ffff00;
     padding-bottom: 40px;
 }
 
+.fa-square-js:hover{
+    transition: all .5s ease-in;
+    transform: rotate(360deg);
+    color: #ffbb00;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    color: #fff;
+}
+
 @media screen and (max-width: 500px) {
-    .form{
+    .form {
         width: 80%;
     }
 }

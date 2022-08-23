@@ -43,8 +43,8 @@ console.log(`La busqueda es ${busqueda}`)
 aprendices.sort();
 
 let aprendice=[
-    {primerNombre:"Jose",primerApellido:"Posada"},
-    {primerNombre:"Sanda",primerApellido:"Rodriguez"}
+    {primerNombre:"William",primerApellido:"Latorre"},
+    {primerNombre:"Maria",primerApellido:"Rodriguez"}
 ]
 
 let nombrecompleto = aprendice.map(function(ele,ind,arr){
