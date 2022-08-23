@@ -3,7 +3,23 @@ function calcular(){
     let num2=parseInt(document.getElementById("num2").value);
     let op=document.getElementById("operacion").value;
     if(op==1){
-        let res=num1+num2;
-        alert(`El numero 1 es ${num1} y el numero 2 es ${num2} la suma es ${res}`);
-  }
+        let sum=num1+num2;
+        alert(`Los numeros digitados son ${num1} y ${num2}.
+        El resultado de la operacion es ${sum}`);
+    }else if(op==2){
+      let res=num1-num2;
+      alert(`Los numeros digitados son ${num1} y ${num2}.
+      El resultado de la oparacion es ${res}`)
+    }else if(op==3){
+      let mult=num1*num2;
+      alert(`Los numeros digitados son ${num1} y ${num2}.
+      El resultado de la oparacion es ${mult}`)
+    }else if(op==4){
+      let div=num1/num2;
+      alert(`Los numeros digitados son ${num1} y ${num2}.
+      El resultado de la oparacion es ${div}`)
+    }else{
+      alert(`La opcion Elegida no es valida, Por favor vuelva
+      a elegir una operacion valida`)
+    }
 }
