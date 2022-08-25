@@ -252,6 +252,13 @@ select:focus~.barra::before {
     width: 100%;
 }
 
+.prueba2{
+    font-weight: 700;
+    position: relative;
+    top: 11px;
+    right: 18px;
+}
+
 .fa-square-js {
     margin-left: 50%;
     font-size: 6em;
