@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="">
+        <a href="index-vistas.html"><button class="back"><i class="fa-solid fa-hand-point-left"></i>Volver al inicio</button></a>
+        <form class="form-ejercicios" >
+            <div class="form">
+                <h1>profesores</h1>
+                <div class=" grupo">
+                    <select class="grupo" id="nombre" style="margin-left: 0;" required><span class="barra"></span>
+                        <option selected>Seleccione el nombre del profesor</option>
+                        <option value="Yaneth Castillo, Gestion Ambiental">Yaneth </option>
+                        <option value="Carolina Forero, Seguimiento del proyecto">Carolina </option>
+                        <option value="Adriana Duarte, Diseño FrontEnd">Adriana </option>
+                        <option value="Jennifer Fajardo, Javascript">Jennifer </option>
+                        <option value="Sandra Rueda,bases de datos ">Sandra </option>
+                        <option value="Andrea Ramos, Promover">Andrea  </option>
+                        <option value="Cristian Buitrago, Php">Cristian  </option>
+                    </select>
+                </div>
+                <div class=" grupo">
+                    <select class="grupo" id="apellido" style="margin-left: 0;" required><span class="barra"></span>
+                        <option selected>Seleccione el apellido del profesor</option>
+                        <option value="Yaneth Castillo, Gestion Ambiental">Castillo</option>
+                        <option value="Carolina Forero, Seguimiento del proyecto">Forero</option>
+                        <option value="Adriana Duarte, Diseño FrontEnd">Duarte</option>
+                        <option value="Jennifer Fajardo, Javascript">Fajardo</option>
+                        <option value="Sandra Rueda,bases de datos">Rueda </option>
+                        <option value="Andrea Ramos, Promover">Ramos </option>
+                        <option value="Cristian Buitrago, Php">Buitrago </option>
+                    </select>
+                </div>
+                <div class=" grupo">
+                    <select class="grupo" id="actividad" style="margin-left: 0;" required><span class="barra"></span>
+                        <option selected>Seleccione la actividad del profesor</option>
+                        <option value="Yaneth Castillo, Gestion Ambiental">Gestion Ambiental</option>
+                        <option value="Carolina Forero, Seguimiento del proyecto">Seguimiento del proyecto</option>
+                        <option value="Adriana Duarte, Diseño FrontEnd">Diseño FrontEnd</option>
+                        <option value="Jennifer Fajardo, Javascript">Javascript </option>
+                        <option value="Sandra Rueda,bases de datos">bases de datos </option>
+                        <option value="Andrea Ramos, Promover">Promover</option>
+                        <option value="Cristian Buitrago, Php">Php</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit" id="submit" style="margin-left: 39px">Calcular</button><!-- onclick="calcular()"-->
+            </div>
+            <div id="form">
+
+            </div>
+        </form>
+    </div>
+    <script src="js/profesores.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -223,8 +223,33 @@ select:focus~.barra::before {
 .fa-coins,
 .fa-recycle,
 .fa-plus-minus,
-.fa-ruler-combined {
+.fa-ruler-combined,
+.fa-chalkboard-user{
     padding: 22px;
+}
+
+.fa-check{
+    position: relative;    
+    top: 13px;
+    left: -10px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.fa-x{
+    position: relative;    
+    top: 17px;
+    left: -10px;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.prueba{
+    top: 10px;
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 100%;
 }
 
 .fa-square-js {

@@ -32,10 +32,17 @@
                         <option value="4">Division</option>
                     </select>
                 </div>
-                <button type="submit" class="submit" style="margin-left: 39px" onclick="calcular()">Calcular</button>
+                <button type="submit" class="submit" id="submit" style="margin-left: 39px">Calcular</button><!-- onclick="calcular()"-->
                 <a href="calculadora2.html"><p  class="calculator">Segunda Calculadora</p></a>
             </div>
         </form>
+        <div id="ops" style="background-color: #000;">
+            <button style="border-color:red;" id="btn-sumar">Sumar</button>
+            <button style="border-color:blue;" id="btn-restar">Restar</button>
+        </div>
+        <div id="resultado">
+      
+        </div>
     </div>
     <script src="js/calculadora.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
