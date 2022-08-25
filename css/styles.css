@@ -18,7 +18,7 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3F5EFB, #FC466B);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +222,8 @@ select:focus~.barra::before {
 .fa-piggy-bank,
 .fa-coins,
 .fa-recycle,
-.fa-plus-minus {
+.fa-plus-minus,
+.fa-ruler-combined {
     padding: 22px;
 }
 
@@ -237,6 +238,14 @@ select:focus~.barra::before {
     transition: all .5s ease-in;
     transform: rotate(360deg);
     color: #ffbb00;
+}
+
+.grados{
+    margin-bottom: -2rem;
+    position: relative;
+    left: 73px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 footer {

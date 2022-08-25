@@ -172,16 +172,36 @@ body.light .calculator .equal::before,
     border-radius: 10px;
 }
 
-body.light .btn {
+.btn2 {
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 5px 5px 30px rgba(0, 0, 0, 0.25), inset -2px -2px 5px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+body.light .btn,
+body.light .btn2 {
     background: #fafafa;
+    text-decoration: none;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 5px 5px 30px rgba(0, 0, 0, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.1), inset 2px 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.btn strong {
+.btn strong,
+.btn2 strong {
     display: none;
 }
 
-.btn strong:nth-child(1) {
+.btn strong:nth-child(1),
+.btn2 strong:nth-child(1) {
     display: block;
 }
 
@@ -189,6 +209,7 @@ body.light .btn strong:nth-child(1) {
     display: none;
 }
 
-body.light .btn strong:nth-child(2) {
+body.light .btn strong:nth-child(2),
+body.light .btn2 strong:nth-child(2) {
     display: block;
 }
