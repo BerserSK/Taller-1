@@ -7,7 +7,7 @@ listar.addEventListener('click', (e)=>{
     if(op==op2 && op==op3){
         e.preventDefault();
         let texto=`
-        <p class="prueba2">la opcion elegida es ${op}</p>
+        <p class="prueba2"></p>
         <i class="fa-solid fa-check"></i>
         <p class="prueba">la respuesta es correcta</p>`
       rta.innerHTML=texto; 
@@ -16,9 +16,9 @@ listar.addEventListener('click', (e)=>{
       rta.style.setProperty('left', "60px");
       rta.style.setProperty('color', "green");
     }else if(op!=op2 && op2!=op3 && op3!=op){
-        e.preventDefault();
+        e.preventDefault();//Las opciones elegidas son ${op}, ${op2} y ${op3}
         let texto=`
-        <p class="prueba2">la opcion elegida es ${op}</p>
+        <p class="prueba2"></p>
         <i class="fa-solid fa-x"></i>
         <p class="prueba">la respuesta es incorrecta</p>`
       rta.innerHTML=texto;
@@ -29,7 +29,7 @@ listar.addEventListener('click', (e)=>{
     }else{
         e.preventDefault();
         let texto=`
-        <p class="prueba2">la opcion elegida es ${op}</p>
+        <p class="prueba2"></p>
         <i class="fa-solid fa-x"></i>
         <p class="prueba">la respuesta es incorrecta</p>`
       rta.innerHTML=texto;
