@@ -371,6 +371,111 @@ select:focus~.barra::before {
 
 .card:hover .back {
     transform: perspective(600px) rotateY(360deg);
+    top: 0;
+}
+
+.modal,
+.modal2,
+.modalt,
+.modalta,
+.modalr,
+.modalra,
+.modald,
+.modalrd,
+.modaltr,
+.modaltd,
+.modalc,
+.modalcd,
+.modalca{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow: auto;
+    padding-top: 100px;
+    display: none;
+}
+
+.contenidoModal,
+.contenidoModal2,
+.contenidoModalT,
+.contenidoModalTA,
+.contenidoModalR,
+.contenidoModalRA,
+.contenidoModalD,
+.contenidoModalRD,
+.contenidoModalTR,
+.contenidoModalTD,
+.contenidoModalC,
+.contenidoModalCD,
+.contenidoModalCA{
+    background-color: #fff;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    padding: 1rem;
+    animation: animarmodal;
+    animation-duration: .5s; 
+}
+
+@keyframes animarmodal {
+    from {top: -300px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+.cerrarModal,
+.cerrarModal2,
+.cerrarModalT,
+.cerrarModalTA,
+.cerrarModalR,
+.cerrarModalRA,
+.cerrarModalD,
+.cerrarModalRD,
+.cerrarModalTR,
+.cerrarModalTD,
+.cerrarModalC,
+.cerrarModalCD,
+.cerrarModalCA{
+    font-size: 2rem;
+    float: right;
+}
+
+.cerrarModal:hover,
+.cerrarModal2:hover,
+.cerrarModalT:hover,
+.cerrarModalTA:hover,
+.cerrarModalR:hover,
+.cerrarModalRA:hover,
+.cerrarModalD:hover,
+.cerrarModalRD:hover,
+.cerrarModalTR:hover,
+.cerrarModalTD:hover,
+.cerrarModalC:hover,
+.cerrarModalCD:hover,
+.cerrarModalCA:hover{
+    cursor: pointer;
+}
+
+.contenidoModal h2,
+.contenidoModal2 h2,
+.contenidoModalT h2,
+.contenidoModalTA h2,
+.contenidoModalR h2,
+.contenidoModalRA h2,
+.contenidoModalD h2,
+.contenidoModalRD h2,
+.contenidoModalTR h2,
+.contenidoModalTD h2,
+.contenidoModalC h2,
+.contenidoModalCD h2,
+.contenidoModalCA h2{
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    clear: both;
 }
 
 footer {
