@@ -478,6 +478,10 @@ select:focus~.barra::before {
     clear: both;
 }
 
+div::-webkit-scrollbar{
+    display: none;
+}
+
 footer {
     display: flex;
     justify-content: space-around;
