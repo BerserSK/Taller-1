@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #FC466B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3F5EFB, #FC466B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Itim', cursive;
+    color: aqua;
+}
+
+/*Estilos del formulario*/
+.frm-container{
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 40rem;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    margin: 50px auto;
+}
+
+.frm-input{
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    box-shadow: 4px 4px 3px #000000;
+    margin-top: 1rem;
+}
+
+.frm-input:focus{
+    outline: none;
+    border-color: #5ccdfa;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#g-terminos{
+    display: flex;
+    justify-content: center;
+}
+
+.frm-checkbox{
+    margin: 1rem;
+}
+
+.btn-enviar{
+    background: linear-gradient(#11b5f6, #5ccdfa);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-enviar:hover{
+    background: linear-gradient(#5ccdfa, #11b5f6);
+}
+
+.msn-error{
+    font-size: 14px;
+    color: #5ccdfa;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.form-group{
+    margin: 0.5rem 0;
+}
+
+label{
+    font-weight: 500;
+}
+
+.form-group-input{
+    position: relative;
+}
+
+.frm-icono{
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+    color: #5ccdfa;
+    z-index: 100;
+}
+
+.success .frm-icono{
+    color: greenyellow;
+}
+
+.error .frm-icono{
+    color: red;
+}
+
+.msn-error-visible{
+    visibility: visible;
+    opacity: 1;
+}

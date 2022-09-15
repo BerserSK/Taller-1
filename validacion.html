@@ -6,66 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Validacion Campos</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/validacion.css">
     <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/print.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="" style="width: 27%;">
+    <div class="frm-container">
         <a href="index.html"><button class="back"><i class="fa-solid fa-hand-point-left"></i>Volver al inicio</button></a>
-        <form class="form-ejercicios">
+        <form class="frm-usuario" id="frm-usuario">
             <div class="form">
                 <h1>Validacion</h1>
-                <div class=" grupo">
-                    <select class="grupo" id="selection" style="margin-left: 0;" required><span class="barra"></span>
-                        <option selected>Tipo de documento</option>
-                        <option value="1">Cedula de ciudadania</option>
-                        <option value="2">Tarjeta de identidad</option>
-                        <option value="3">Pasaporte</option>
-                    </select>
+                <div class="form-group" id="g-tipdoc">
+                    <label for="tipdoc">Tipo de documento</label>
+                    <div class="form-group-input">
+                        <select class="frm-input" id="tipdoc" name="tipdoc" required><span class="barra"></span>
+                            <option selected>Tipo de documento</option>
+                            <option value="1">Cedula de ciudadania</option>
+                            <option value="2">Tarjeta de identidad</option>
+                            <option value="3">Cedula extranjera</option>
+                            <option value="4">Pasaporte</option>
+                        </select>
+                        <span class="msn-error">No eligio correctamente</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="text" class="" id="lado2" required><span class="barra"></span>
-                    <label for="lado2" class="">Nº de docuemnto</label>
+                <div class="form-group" id="g-numdoc"><!--Class="grupo" Para todos css-->
+                    <label for="numdoc">Numero de documento</label>
+                    <div class="form-group-input">
+                        <input type="text" class="frm-input" name="numdoc" id="numdoc" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <span class="msn-error">Minimo 7 numeors, maximo 10 numeros</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="text" class="" id="lado3" required><span class="barra"></span>
-                    <label for="lado3" class="">Nombre</label>
+                <div class="form-group" id="g-nombre"><!--Class="grupo" Para todos css-->
+                    <label for="nombre">Nombre</label>
+                    <div class="form-group-input">
+                        <input type="text" class="frm-input" name="nombre" id="nombre" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <span class="msn-error">Solo puedes ingresar letras, maximo 40 caracteres</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="text" class="" id="lado3" required><span class="barra"></span>
-                    <label for="lado3" class="">Apellido</label>
+                <div class="form-group" id="g-apellido"><!--Class="grupo" Para todos css-->
+                    <label for="apellido">Apellido</label>
+                    <div class="form-group-input">
+                        <input type="text" class="frm-input" name="apellido" id="apellido" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <span class="msn-error">Solo puedes ingresar letras, maximo 40 caracteres</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="date" class="" id="lado3" value="2022-09-08" required><span class="barra"></span>
-                    <label for="lado3" class="">Fecha de nacimiento</label>
+                <div class="form-group" id="g-telefono"><!--Class="grupo" Para todos css-->
+                    <label for="telefono">Telefono</label>
+                    <div class="form-group-input">
+                        <input type="text" class="frm-input" name="telefono" id="telefono" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <span class="msn-error">Minimo 7 numeors, maximo 10 numeros</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="text" class="" id="lado3" required><span class="barra"></span>
-                    <label for="lado3" class="">Correo electronico</label>
+                <div class="form-group" id="g-nacimiento"><!--Class="grupo" Para todos css-->
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <div class="form-group-input">
+                        <input type="date" class="frm-input" id="nacimiento" name="nacimiento" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <span class="msn-error">Fecha elegida no valida</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="password" class="" id="lado3" required><span class="barra"></span>
-                    <label for="lado3" class="">Contraseña</label>
+                <div class="form-group" id="g-email"><!--Class="grupo" Para todos css-->
+                    <label for="email">Correo Electronico</label>
+                    <div class="form-group-input">
+                        <input type="email" class="frm-input" id="email"  name="email" required><span class="barra"></span>
+                        <!--<label for="lado2" class="">Nº de docuemnto</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <span class="msn-error">Correo electronico digito incorrectamente</span>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="password" class="" id="lado3" required><span class="barra"></span>
-                    <label for="lado3" class="">Comprobar contraseña</label>
+                <div class="form-group" id="g-password">
+                    <label for="password" class="">Contraseña</label>
+                    <div class="form-group-input">
+                        <input type="password" name="password" id="password" class="frm-input" required><span class="barra"></span>
+                        <!--<label for="lado3" class="">Contraseña</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <div class="msn-error">Tu password debe incluir minimo 8 caracteres, 1 mayuscula, 1 numero y 1 caracter especial</div>
+                    </div>
                 </div>
-                <div class="grupo">
-                    <input type="checkbox" class="" id="lado3" required style="
-                        position: relative;
-                        right: 90px;
-                    "><a href="" id="abrirModal" style="
-                        position: relative;
-                        top: -19px;
-                        text-decoration: underline !important;
-                        left: 65px;
-                    ">Aceptar Términos de uso</a>
+                <div class="form-group" id="g-password">
+                    <label for="password" class="">Confirmar Contraseña</label>
+                    <div class="form-group-input">
+                        <input type="password" name="password2" id="password2" class="frm-input" required><span class="barra"></span>
+                        <!--<label for="password2" class="">Contraseña</label>-->
+                        <i class="fa-solid fa-check frm-icono"></i>
+                        <div class="msn-error">La confirmacion de la Contraseña no coincide</div>
+                    </div>
                 </div>
-                <button type="submit" class="submit" id="submit" style="margin-left: 39px">Registrar</button>
+                <div class="form-group" id="g-terminos">
+                    <div class="form-group-input">
+                        <input type="checkbox" name="terminos" class="frm-checkbox" id="terminos" required>
+                        <label for=""><a href="" id="abrirModal" >Aceptar Términos de uso</a></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-enviar" id="submit">Registrar</button>
             </div>
         </form>
         <div id=""></p>
