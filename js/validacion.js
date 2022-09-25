@@ -17,7 +17,7 @@ const inputs={
     apellido: false,
     email: false,
     telefono: false,
-    password: false
+    password: false,
 }
 
 //Acceder al formulario
@@ -25,10 +25,10 @@ let form=document.getElementById("frm-usuario");
 let campos=document.querySelectorAll("#frm-usuario input");
 
 //Agregar listener de evento submit al formulario que se envia
-form.addEventListener('submit',e=>{
+/*form.addEventListener('submit',e=>{
     e.preventDefault; //Evitar que se envie el formulario para realizar las validaciones 
-    alert("Se envio el formulario");
-})
+    //alert("Se envio el formulario");
+})*/
 
 const validarInput=(regla,input,grupo)=>{
     if(regla.test(input.value)){
@@ -37,17 +37,37 @@ const validarInput=(regla,input,grupo)=>{
         document.querySelector(`#g-${grupo} i`).classList.add('fa-check');
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-circle-exclamation');
         document.querySelector(`#g-${grupo} .msn-error`).classList.remove('msn-error-visible')
-        inputs[grupo]=true
+        inputs[grupo]=true;
     }else{
         document.getElementById(`g-${grupo}`).classList.add('error');
         document.getElementById(`g-${grupo}`).classList.remove('success');
         document.querySelector(`#g-${grupo} i`).classList.remove('fa-check');
         document.querySelector(`#g-${grupo} i`).classList.add('fa-circle-exclamation');
         document.querySelector(`#g-${grupo} .msn-error`).classList.add('msn-error-visible');
-        inputs[grupo]=false
+        inputs[grupo]=false;
     }
 }
 
+
+const validarPassword2=() =>{ 
+    const password = document.getElementById('password'); 
+    const password2 = document.getElementById('password2'); 
+    if(password.value !== password2.value){ 
+        document.getElementById(`g-password2`).classList.add('error'); 
+        document.getElementById(`g-password2`).classList.remove('success'); 
+        document.querySelector(`#g-password2 i`).classList.remove('fa-check'); 
+        document.querySelector(`#g-password2 i`).classList.add('fa-circle-exclamation'); 
+        document.querySelector(`#g-password2 .msn-error`).classList.add('msn-error-visible'); 
+        inputs['password']=false;
+    }else{
+        document.getElementById(`g-password2`).classList.remove('error'); 
+        document.getElementById(`g-password2`).classList.add('success'); 
+        document.querySelector(`#g-password2 i`).classList.add('fa-check'); 
+        document.querySelector(`#g-password2 i`).classList.remove('fa-circle-exclamation'); 
+        document.querySelector(`#g-password2 .msn-error`).classList.remove('msn-error-visible');
+        inputs['password']=true;
+    }
+}
 
 
 const validarCampos=(e)=>{
@@ -65,20 +85,21 @@ const validarCampos=(e)=>{
         case "telefono":
             validarInput(reglas.numeros,e.target,e.target.name);
         break;
-        case "nacimiento":
+        /*case "nacimiento":
             validarInput(reglas.fechas,e.target,e.target.name);
-        break;
+        break;*/
         case "email":
             validarInput(reglas.correo,e.target,e.target.name);
         break;
         case "password":
             validarInput(reglas.password,e.target,e.target.name)
+            validarPassword2()
         break;
         case "password2":
-            validarInput(reglas.password,e.target,e.target.name)
+            validarPassword2()
         break;
         default:
-            alert("No se ha recibido un evento sobre el input");
+            //alert("No se ha recibido un evento sobre el input");
         break;
     }
 }
@@ -91,32 +112,29 @@ campos.forEach((campo)=>{
 form.addEventListener('submit', e=>{
     e.preventDefault();
     const terminos = document.getElementById('terminos');
-    if(inputs.numdoc && inputs.nombre && inputs.apellido && inputs.email && inputs.telefono && inputs.password && terminos.cheked){
-        alert("El usuario ha sido registrado");
+    if(inputs.numdoc && inputs.nombre && inputs.apellido && inputs.email && inputs.telefono && inputs.password && terminos.checked){
         form.reset();
+        //alert("Formulario enviado exitosamente")
+        document.querySelector(`#g-exito .msn-exito`).classList.add('msn-exito-visible'); 
+        document.querySelector(`#g-submit .msn-error`).classList.remove('msn-error-visible2');
+        setTimeout(()=>{
+            document.querySelector(`#g-exito .msn-exito`).classList.remove('msn-exito-visible'); 
+        }, 5000);
         document.querySelectorAll('.success').forEach(icono=>{
             icono.classList.remove('success')
         })
     }else{
+        document.querySelector(`#g-submit .msn-error`).classList.add('msn-error-visible2');
+        document.querySelector(`#g-exito .msn-exito`).classList.remove('msn-exito-visible'); 
+        setTimeout(()=>{
+            document.querySelector(`#g-submit .msn-error`).classList.remove('msn-error-visible2');
+        }, 5000);
         document.querySelectorAll('.success').forEach(icono=>{
             icono.classList.add('error')
+            icono.classList.remove('success')
         })
     }
 })
-
-
-    
-/*function comprobarClave(){
-    
-    clave1 = document.getElementById('password').value
-    clave2 = document.getElementById('password2').value
-
-    if (clave1 == clave2)
-       alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo")
-    else
-       alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
-}*/
-
 
 
 
