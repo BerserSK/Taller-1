@@ -85,9 +85,9 @@ const validarCampos=(e)=>{
         case "telefono":
             validarInput(reglas.numeros,e.target,e.target.name);
         break;
-        /*case "nacimiento":
+        case "nacimiento":
             validarInput(reglas.fechas,e.target,e.target.name);
-        break;*/
+        break;
         case "email":
             validarInput(reglas.correo,e.target,e.target.name);
         break;
